@@ -32,12 +32,16 @@
 
   // Milliseconds it takes to remove a bubble
   const DEATH_DURATION = 1000;
+
   // % of page that bubbles can't spawn to the left of
   const LEFT_SPAWN_BOUNDS = 10;
+
   // % of page that bubbles can't spawn above
   const TOP_SPAWN_BOUNDS = 10;
+
   // % width of page that bubbles can spawn in, starting at LEFT_SPAWN_BOUNDS.
   const SPAWN_BOX_WIDTH = 80;
+  
   // % width of page that bubbles can spawn in, starting at TOP_SPAWN_BOUNDS.
   const SPAWN_BOX_HEIGHT = 80;
 
