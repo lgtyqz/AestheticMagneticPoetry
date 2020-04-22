@@ -166,7 +166,7 @@
    * multiple parameters.
    * @param {string} text - The text string the bubble should display.
    */
-  function addBubble(event, text="") {
+  function addBubble(event, text = "") {
     let newBubble = document.createElement("figure");
     let word = document.createElement("p");
     if (text === "") {

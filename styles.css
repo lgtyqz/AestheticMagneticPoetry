@@ -8,6 +8,7 @@
     background-color: #4ac2c0;
     box-shadow: 0px 0px 5px 3px #4ac2c0;
   }
+
   to {
     background-color: #ab91eb;
     box-shadow: 0px 0px 5px 3px #ab91eb;
@@ -19,6 +20,7 @@
     background-color: #bef7ef;
     color: #bef7ef;
   }
+
   to {
     background-color: #c4e8ff;
     color: #c4e8ff;
@@ -26,8 +28,19 @@
 }
 
 @keyframes grow {
-  from {width: 0px; height: 0px; font-size: 0px; transform: translate(100%, 100%)}
-  to {width: 150px; height: 150px; font-size: 24px; transform: translate(0%, 0%)}
+  from {
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+    transform: translate(100%, 100%);
+  }
+
+  to {
+    width: 150px;
+    height: 150px;
+    font-size: 24px;
+    transform: translate(0%, 0%);
+  }
 }
 
 body {
