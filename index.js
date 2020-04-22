@@ -43,7 +43,7 @@
   const SPAWN_BOX_WIDTH = 80;
 
   // % width of page that bubbles can spawn in, starting at TOP_SPAWN_BOUNDS.
-  const SPAWN_BOX_HEIGHT = 80;
+  const SPAWN_BOX_HEIGHT = 50;
 
   // Sound playing & volume settings
   for (let i = 0; i < POPS.length; i++) {
