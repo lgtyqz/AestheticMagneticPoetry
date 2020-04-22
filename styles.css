@@ -3,133 +3,133 @@
  * as well as the aesthetic behind the background and UI. 
  */
 @keyframes pulse {
-    from {background-color: #4ac2c0; box-shadow: 0px 0px 5px 3px #4ac2c0}
-    to {background-color: #ab91eb; box-shadow: 0px 0px 5px 3px #ab91eb}
+  from {background-color: #4ac2c0; box-shadow: 0px 0px 5px 3px #4ac2c0}
+  to {background-color: #ab91eb; box-shadow: 0px 0px 5px 3px #ab91eb}
 }
 
 @keyframes blue-pulse {
-    from {background-color: #bef7ef; color: #bef7ef}
-    to {background-color: #c4e8ff; color: #c4e8ff}
+  from {background-color: #bef7ef; color: #bef7ef}
+  to {background-color: #c4e8ff; color: #c4e8ff}
 }
 
 @keyframes grow {
-    from {width: 0px; height: 0px; font-size: 0px; transform: translate(100%, 100%)}
-    to {width: 150px; height: 150px; font-size: 24px; transform: translate(0%, 0%)}
+  from {width: 0px; height: 0px; font-size: 0px; transform: translate(100%, 100%)}
+  to {width: 150px; height: 150px; font-size: 24px; transform: translate(0%, 0%)}
 }
 
 body {
-    font-family: "Futura", "Nunito Sans", sans-serif;
-    user-select: none;
-    margin-top: 0px;
+  font-family: "Futura", "Nunito Sans", sans-serif;
+  user-select: none;
+  margin-top: 0px;
 }
 
 body, section#title-text {
-    animation: blue-pulse 3s alternate infinite;
+  animation: blue-pulse 3s alternate infinite;
 }
 
 section#title-text, figure, footer {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 section#title-text, button img, footer {
-    width: 100%;
+  width: 100%;
 }
 
 section#title-text, button img {
-    height: 100%;
+  height: 100%;
 }
 
 section#title-text, figure {
-    text-transform: uppercase;
-    text-align: center;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 section#title-text {
-    font-size: 60px;
-    z-index: -1000;
-    transition: all 3s ease;
-    color: #EEEEEE;
-    text-shadow: 1px 1px 8px #999999;
-    letter-spacing: 5px;
+  font-size: 60px;
+  z-index: -1000;
+  transition: all 3s ease;
+  color: #EEEEEE;
+  text-shadow: 1px 1px 8px #999999;
+  letter-spacing: 5px;
 }
 
 figure, button {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 figure {
-    left: 50%;
-    right: 50%;
-    width: 150px;
-    height: 150px;
-    opacity: 1;
-    margin: 0px 0px 0px 0px;
-    background-color: #4ac2c0;
-    box-shadow: 0px 0px 5px 3px #4ac2c0;
-    transition: background-color 1s ease, box-shadow 1s ease, width 1s ease, height 1s ease,
-    border-radius 1s ease-in, opacity 1s ease, font-size 1s ease;
-    color: #FFFFFF;
-    text-shadow: 0px 0px 5px #FFFFFF;
-    letter-spacing: 3px;
-    font-size: 24px;
-    animation: pulse 3s alternate infinite, grow 1s;
+  left: 50%;
+  right: 50%;
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+  margin: 0px 0px 0px 0px;
+  background-color: #4ac2c0;
+  box-shadow: 0px 0px 5px 3px #4ac2c0;
+  transition: background-color 1s ease, box-shadow 1s ease, width 1s ease, height 1s ease,
+  border-radius 1s ease-in, opacity 1s ease, font-size 1s ease;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 5px #FFFFFF;
+  letter-spacing: 3px;
+  font-size: 24px;
+  animation: pulse 3s alternate infinite, grow 1s;
 }
 
 figure:hover {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 figure.dying {
-    font-size: 75px;
-    box-shadow: 0px 0px 5px 50px #B0CBF1;
-    opacity: 0;
+  font-size: 75px;
+  box-shadow: 0px 0px 5px 50px #B0CBF1;
+  opacity: 0;
 }
 
 button {
-    height: 50px;
-    width: 50px;
-    padding: 0px 0px 0px 0px;
-    margin: 10px 10px 10px 10px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-    padding: 8px 8px 8px 8px;
+  height: 50px;
+  width: 50px;
+  padding: 0px 0px 0px 0px;
+  margin: 10px 10px 10px 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  padding: 8px 8px 8px 8px;
 }
 
 button#add {
-    background-color: #2ECC71;
+  background-color: #2ECC71;
 }
 
 button#add:hover {
-    background-color: #28ad61;
+  background-color: #28ad61;
 }
 
 button#clear {
-    background-color: #E74C3C;
+  background-color: #E74C3C;
 }
 
 button#clear:hover {
-    background-color: #ba3b2f;
+  background-color: #ba3b2f;
 }
 
 section#links, section#links a {
-    color: #DDDDDD;
+  color: #DDDDDD;
 }
 
 footer {
-    height: 75px;
-    left: 0%;
-    bottom: 0%;
+  height: 75px;
+  left: 0%;
+  bottom: 0%;
 }
 
 section#instructions {
-    color: #BBBBBB;
+  color: #BBBBBB;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
