@@ -1,15 +1,28 @@
 /*
  * CSE 154 Creative Project 2 CSS — Provides the feel and looks of the bubbles,
- * as well as the aesthetic behind the background and UI. 
+ * as well as the aesthetic behind the background and UI.
  */
+
 @keyframes pulse {
-  from {background-color: #4ac2c0; box-shadow: 0px 0px 5px 3px #4ac2c0}
-  to {background-color: #ab91eb; box-shadow: 0px 0px 5px 3px #ab91eb}
+  from {
+    background-color: #4ac2c0;
+    box-shadow: 0px 0px 5px 3px #4ac2c0;
+  }
+  to {
+    background-color: #ab91eb;
+    box-shadow: 0px 0px 5px 3px #ab91eb;
+  }
 }
 
 @keyframes blue-pulse {
-  from {background-color: #bef7ef; color: #bef7ef}
-  to {background-color: #c4e8ff; color: #c4e8ff}
+  from {
+    background-color: #bef7ef;
+    color: #bef7ef;
+  }
+  to {
+    background-color: #c4e8ff;
+    color: #c4e8ff;
+  }
 }
 
 @keyframes grow {
@@ -69,8 +82,14 @@ figure {
   margin: 0px 0px 0px 0px;
   background-color: #4ac2c0;
   box-shadow: 0px 0px 5px 3px #4ac2c0;
-  transition: background-color 1s ease, box-shadow 1s ease, width 1s ease, height 1s ease,
-  border-radius 1s ease-in, opacity 1s ease, font-size 1s ease;
+  transition:
+    background-color 1s ease,
+    box-shadow 1s ease,
+    width 1s ease,
+    height 1s ease,
+    border-radius 1s ease-in,
+    opacity 1s ease,
+    font-size 1s ease;
   color: #FFFFFF;
   text-shadow: 0px 0px 5px #FFFFFF;
   letter-spacing: 3px;
@@ -91,7 +110,6 @@ figure.dying {
 button {
   height: 50px;
   width: 50px;
-  padding: 0px 0px 0px 0px;
   margin: 10px 10px 10px 10px;
   border: none;
   background-color: transparent;

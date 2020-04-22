@@ -4,6 +4,7 @@
  */
 "use strict";
 (function() {
+
   // Word bank for bubbles
   const WORDS = [
     "relax", "&", "&", "&", "enjoy", "life", "as", "is", "like", "love",
@@ -12,6 +13,7 @@
     "an", "have", "in", "heaven", "splendid", "place", "will", "all", "people",
     "friend", "family", "heart", "soul", "peace", "calm"
   ];
+
   // List of all the sound variables
   const BGM = new Audio("./sounds/ambience.ogg");
   const POPS = [
@@ -25,6 +27,19 @@
     new Audio("./sounds/creation-3.ogg")
   ];
   const SELECT_SOUND = new Audio("./sounds/select.ogg");
+
+  // Magic numbers, according to the linter
+
+  // Milliseconds it takes to remove a bubble
+  const DEATH_DURATION = 1000;
+  // % of page that bubbles can't spawn to the left of
+  const LEFT_SPAWN_BOUNDS = 10;
+  // % of page that bubbles can't spawn above
+  const TOP_SPAWN_BOUNDS = 10;
+  // % width of page that bubbles can spawn in, starting at LEFT_SPAWN_BOUNDS.
+  const SPAWN_BOX_WIDTH = 80;
+  // % width of page that bubbles can spawn in, starting at TOP_SPAWN_BOUNDS.
+  const SPAWN_BOX_HEIGHT = 80;
 
   // Sound playing & volume settings
   for (let i = 0; i < POPS.length; i++) {
@@ -79,7 +94,7 @@
    * Plays a sound effect from the beginning.
    * @param {HTMLAudioElement} sound - The sound to play.
    */
-  function playSFX(sound){
+  function playSFX(sound) {
     sound.currentTime = 0;
     sound.play();
   }
@@ -116,7 +131,7 @@
    */
   function killBubble() {
     event.currentTarget.classList.add("dying");
-    window.setTimeout(destroyBubble, 1000, event.currentTarget);
+    window.setTimeout(destroyBubble, DEATH_DURATION, event.currentTarget);
     let pop = selectRandomElement(POPS);
     playSFX(pop);
   }
@@ -130,7 +145,7 @@
     let bubbles = document.querySelectorAll("figure");
     for (let i = 0; i < bubbles.length; i++) {
       bubbles[i].classList.add("dying");
-      window.setTimeout(destroyBubble, 1000, bubbles[i]);
+      window.setTimeout(destroyBubble, DEATH_DURATION, bubbles[i]);
     }
     playSFX(POP_ALL_SOUND);
   }
@@ -154,17 +169,17 @@
   function addBubble(event, text="") {
     let newBubble = document.createElement("figure");
     let word = document.createElement("p");
-    if(text === ""){
+    if (text === "") {
       word.textContent = selectRandomElement(WORDS);
-    }else{
+    } else {
       word.textContent = text;
     }
     newBubble.appendChild(word);
     newBubble.addEventListener("mousedown", startMoveBubble);
     newBubble.addEventListener("mouseup", endMove);
     newBubble.addEventListener("dblclick", killBubble);
-    newBubble.style.left = (10 + Math.floor(Math.random() * 80)) + "%";
-    newBubble.style.top = (10 + Math.floor(Math.random() * 60)) + "%";
+    newBubble.style.left = (LEFT_SPAWN_BOUNDS + Math.floor(Math.random() * SPAWN_BOX_WIDTH)) + "%";
+    newBubble.style.top = (TOP_SPAWN_BOUNDS + Math.floor(Math.random() * SPAWN_BOX_HEIGHT)) + "%";
     document.getElementById("bubble-container").appendChild(newBubble);
     let creationSound = selectRandomElement(CREATION_SOUNDS);
     playSFX(creationSound);
