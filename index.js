@@ -60,6 +60,7 @@
   let currentDragOffsetY = 0;
   let selectedBubble = null;
 
+  // Event listener adding
   window.addEventListener("load", init);
   window.addEventListener("mousemove", playBGM);
 
